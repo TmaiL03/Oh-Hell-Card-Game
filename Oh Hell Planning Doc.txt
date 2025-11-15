@@ -1,0 +1,29 @@
+Oh Hell Card Game:
+
+Scenes:
+- Card
+	- Has suit and value.
+- Player
+	- Has set of cards representing player's hand, is dealt each turn.
+- Deck
+	- Stores list of 52 cards.
+	- shuffle()
+	- deal()
+- GameManager
+	- Stores list of players.
+	- Handles game state (bidding, playing rounds, scoring)
+	- Deals cards to players.
+
+Scoring:
+Correct Bid = 0 => 5pts
+Correct Bid >0 => 10 + number of tricks correctly bid.
+
+Game Flow:
+- Bidding
+	- Every player makes a bid
+- Play Tricks
+	- In order, player leads with a card of their choice, all subsequent players must play a card of the same suit if possible, if not, they are free to play any card they would like.
+- Scoring
+	- Once all players have played one card each, the player with the highest value card played wins the trick.
+
+Repeat until all cards have been played.
