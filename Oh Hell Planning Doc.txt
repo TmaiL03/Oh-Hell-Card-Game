@@ -4,7 +4,9 @@ Scenes:
 - Card
 	- Has suit and value.
 - Player
-	- Has set of cards representing player's hand, is dealt each turn.
+	- Has array of cards.
+	- Stores player score.
+	- Stores player bid (for current round).
 - Deck
 	- Stores list of 52 cards.
 	- shuffle()
@@ -27,3 +29,8 @@ Game Flow:
 	- Once all players have played one card each, the player with the highest value card played wins the trick.
 
 Repeat until all cards have been played.
+
+
+
+GameManager will use Deck instance to distribute cards to players.
+Player's list of cards will be used to populate UI when it's that player's turn. 
