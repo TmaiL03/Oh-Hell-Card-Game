@@ -32,7 +32,7 @@ var cards: Array[Card] = []
 func build_deck() -> void:
 	for suit in suits:
 		for rank in ranks:
-			var instance: Card = card.instantiate() as Card
+			var instance: Card = card.instantiate()
 			add_child(instance)
 			instance.hide()
 			instance.set_card(suit, rank)
@@ -41,12 +41,10 @@ func build_deck() -> void:
 # Randomize order of deck.
 func shuffle():
 	cards.shuffle()
-	for card_inst in cards:
-		print(card_inst.to_print())
 
-# Will return a Card.
-func deal_card() -> void:
-	pass
+# Deals a card to the provided player.
+func deal_card() -> Card:
+	return cards.pop_back()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -6,8 +6,11 @@ var cards: Array[Card] = []
 var score: int = 0
 var bid: int = 0
 
+signal refresh_player_ui(cards: Array[Card])
+
 func deal_card(card: Card) -> void:
 	cards.append(card)
+	refresh_player_ui.emit(cards)
 
 func add_score(more_pts: int) -> void:
 	score += more_pts
@@ -29,5 +32,5 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass

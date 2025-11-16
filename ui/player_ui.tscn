@@ -20,6 +20,7 @@ offset_top = -166.0
 offset_right = 484.0
 grow_horizontal = 2
 grow_vertical = 0
+alignment = 1
 
 [node name="LblBid" type="Label" parent="."]
 layout_mode = 0
