@@ -16,4 +16,3 @@ layout_mode = 1
 offset_right = 192.0
 offset_bottom = 192.0
 texture = ExtResource("3_ktuci")
-stretch_mode = 4

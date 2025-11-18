@@ -6,11 +6,14 @@ var cards: Array[Card] = []
 var score: int = 0
 var bid: int = 0
 
-signal refresh_player_ui(cards: Array[Card])
+signal refresh_player_ui(player: Player)
 
 func deal_card(card: Card) -> void:
 	cards.append(card)
-	refresh_player_ui.emit(cards)
+	refresh_player_ui.emit(self)
+
+func get_cards() -> Array[Card]:
+	return cards
 
 func add_score(more_pts: int) -> void:
 	score += more_pts

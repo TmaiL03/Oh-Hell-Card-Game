@@ -3,11 +3,11 @@ extends Control
 class_name PlayerUI
 #@onready var hand: HBoxContainer = $Hand
 
-func on_refresh_player_ui(cards: Array[Card]) -> void:
+func on_refresh_player_ui(player: Player) -> void:
 	print("Updating player UI...")
 	
 	# Iterate over passed hand of cards, and populate them in the PlayerUI.
-	for card in cards:
+	for card in player.get_cards():
 		var hand: HBoxContainer = get_node("Hand")
 		# REMEMBER TO SHOW.
 		card.show()
