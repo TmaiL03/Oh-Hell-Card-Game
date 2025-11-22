@@ -1,7 +1,6 @@
 extends Control
 
 class_name PlayerUI
-#@onready var hand: HBoxContainer = $Hand
 
 func on_refresh_player_ui(player: Player) -> void:
 	print("Updating player UI...")

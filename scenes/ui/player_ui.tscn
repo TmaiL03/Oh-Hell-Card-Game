@@ -24,8 +24,8 @@ alignment = 1
 
 [node name="LblBid" type="Label" parent="."]
 layout_mode = 0
-offset_right = 216.0
-offset_bottom = 114.0
+offset_right = 200.0
+offset_bottom = 27.0
 text = "Bid: 0"
 
 [node name="LblScore" type="Label" parent="."]
